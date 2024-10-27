@@ -9,7 +9,7 @@ class Student:
     student_amount = 0
     birthday = 0
     def HappyBirthday(self):
-        self.age +=1
+        self.age += 1
         print(f"Happy Birthday to {self.ns.name}. Now you {self.age}!")
 
     def __init__ (self,name, surname,age, height):
