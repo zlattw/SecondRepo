@@ -11,6 +11,7 @@ class Student:
     def HappyBirthday(self):
         self.age +=1
         print(f"Happy Birthday to {self.ns.name}. Now you {self.age}!")
+
     def __init__ (self,name, surname,age, height):
         self.ns = NameSurname(name, surname)
         self.age = age
