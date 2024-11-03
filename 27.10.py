@@ -2,6 +2,10 @@
 
 class NameSurname:
     def __init__ (self, name, surname):
+        if(type(name) != str):
+            raise TypeError("Name is not a string")
+        if (type(surname) != str):
+            raise TypeError("Surname is not a string")
         self.name = name
         self.surname = surname
 
@@ -13,7 +17,12 @@ class Student:
         print(f"Happy Birthday to {self.ns.name}. Now you {self.age}!")
 
     def __init__ (self,name, surname,age, height):
-        self.ns = NameSurname(name, surname)
+        if (type(age) != int):
+            raise TypeError("Incorrect age")
+        if age <= 0:
+            raise TypeError("Incorrect value")
+        self.name = name
+        self.surname = surname
         self.age = age
         self.height = height
         Student.student_amount += 1
@@ -26,7 +35,10 @@ class Student:
         print(f"Height: {self.height}")
 
 print(f"Before creating Student object - {Student.student_amount}")
-Zlata = Student("Zlata", "Samuseva", 12, 175)
+try:
+    Zlata = Student("Zlata", True, 0, 175)
+except Exception as error:
+    print()
 print(f"Before creating Student object - {Student.student_amount}")
 first_student = Student(input("Enter name - "), input("Enter surname - "), input("Enter age - "), input("Enter height - "))
 
