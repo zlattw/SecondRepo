@@ -1,4 +1,8 @@
-
+import logging
+logging.basicConfig(level = logging.DEBUG,
+                    filename = "logs.log",
+                    filemode = "w",
+                    format = "%(levelname)s:%(asctime)s - %(message)s")
 
 class NameSurname:
     def __init__ (self, name, surname):
@@ -26,6 +30,7 @@ class Student:
         self.age = age
         self.height = height
         Student.student_amount += 1
+        logging.info(f"Create new student {Zlata.name} {Zlata.surname}")
 
 
     def printStudent(self):
@@ -35,17 +40,27 @@ class Student:
         print(f"Height: {self.height}")
 
 print(f"Before creating Student object - {Student.student_amount}")
+
+logging.info("Program is started")
 try:
+    logging.debug("In progress..")
     Zlata = Student("Zlata", True, 0, 175)
+    logging.info(f"Create new student {Zlata.name} {Zlata.surname}")
+
+    print(f"Before creating Student object - {Student.student_amount}")
+
+    first_student = Student(input("Enter name - "), input("Enter surname - "), int(input("Enter age - ")), int(input("Enter height - ")))
+    print(Zlata.name, Zlata.surname, Zlata.age, Zlata.height)
+    print(first_student.name, first_student.surname, first_student.age, first_student.height)
+    Zlata.printStudent()
+
+    print(f"Student amount - {Student.student_amount}")
+    print(f"After creating Student object - {Student.student_amount}")
 except Exception as error:
-    print()
-print(f"Before creating Student object - {Student.student_amount}")
-first_student = Student(input("Enter name - "), input("Enter surname - "), input("Enter age - "), input("Enter height - "))
+    print(error)
+    logging.error(error)
+logging.info("Program ended")
 
 
-print(Zlata.name, Zlata.surname, Zlata.age, Zlata.height)
-print(first_student.name, first_student.surname, first_student.age, first_student.height)
-Zlata.printStudent()
-print(f"Student amount - {Student.student_amount}")
-print(f"After creating Student object - {Student.student_amount}")
+
 
