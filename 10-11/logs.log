@@ -1,0 +1,25 @@
+DEBUG:root:debug
+INFO:root:info
+WARNING:root:warning
+ERROR:root:error
+CRITICAL:root:critical
+We have next logging message:2024-11-10 09:55:17,924:DEBUG - debug
+We have next logging message:2024-11-10 09:55:17,924:INFO - info
+We have next logging message:2024-11-10 09:55:17,924:WARNING - warning
+We have next logging message:2024-11-10 09:55:17,924:ERROR - error
+We have next logging message:2024-11-10 09:55:17,924:CRITICAL - critical
+We have next logging message:2024-11-10 09:55:20,673:DEBUG - debug
+We have next logging message:2024-11-10 09:55:20,673:INFO - info
+We have next logging message:2024-11-10 09:55:20,673:WARNING - warning
+We have next logging message:2024-11-10 09:55:20,674:ERROR - error
+We have next logging message:2024-11-10 09:55:20,674:CRITICAL - critical
+We have next logging message:2024-11-10 10:04:51,192:DEBUG - debug
+We have next logging message:2024-11-10 10:04:51,193:INFO - info
+We have next logging message:2024-11-10 10:04:51,193:WARNING - warning
+We have next logging message:2024-11-10 10:04:51,193:ERROR - error
+We have next logging message:2024-11-10 10:04:51,193:CRITICAL - critical
+We have next logging message:2024-11-10 10:04:51,193:ERROR - Exception
+Traceback (most recent call last):
+  File "C:\Users\PS21\PycharmProjects\SecondRepo\10-11\Logger.py", line 16, in <module>
+    print(10/0)
+ZeroDivisionError: division by zero
