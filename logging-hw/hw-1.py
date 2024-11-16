@@ -2,7 +2,7 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG,
                     filename="logs.log",
-                    filemode="a",
+                    filemode="w",
                     format="We have next logging message:%(asctime)s:%(levelname)s - %(message)s"
                     )
 class Animal:
@@ -12,15 +12,15 @@ class Animal:
         self.width = width
         self.length = length
         self.age = age
+        logging.debug(f"Animal created with parameters: weight: {self.weight}, height: {self.height}, width: {self.width}, length: {self.length}, age: {self.age}")
 
 
     def animal_info(self):
-        print(f"Weight: {self.weight}, height: {self.height}, width: {self.width}, length: {self.length}, age: {self.age}")
-try:
-    logging.debug("Program started")
-    Animal = Animal()
-    Animal.animal_info()
-except Exception as error:
-    print(error)
-    logging.error(error)
+        info = (f"Weight: {self.weight}, height: {self.height}, width: {self.width}, length: {self.length}, age: {self.age}")
+        print(info)
+        logging.debug(f"Animal info displayed: {info}")
+
+Animal = Animal()
+Animal.animal_info()
+
 
