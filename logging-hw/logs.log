@@ -1,2 +1,2 @@
-We have next logging message:2024-11-17 09:25:42,712:DEBUG - Animal created with parameters: weight: 96, height: 110, width: 65, length: 140, age: 5
-We have next logging message:2024-11-17 09:25:42,713:DEBUG - Animal info displayed: Weight: 96, height: 110, width: 65, length: 140, age: 5
+We have next logging message:2024-11-22 17:48:44,782:DEBUG - Animal created with parameters: weight: 96, height: 110, width: 65, length: 140, age: 5
+We have next logging message:2024-11-22 17:48:44,782:DEBUG - Animal info displayed: Weight: 96, height: 110, width: 65, length: 140, age: 5
