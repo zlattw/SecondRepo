@@ -10,18 +10,18 @@ class Temperature:
 
     def set_temperature(self, temperature: float):
         if temperature < -273.15:
-            raise ValueError("!!!Температура не може бути нижче -273.15")
+            raise ValueError("!!!Температура не може бути нижче -273.15!!!")
         self.temperature = temperature
 
 try:
     temp = Temperature(30)
-    print(f"Температура у Фаренгейтах - {temp.celsius_to_fahrenheit()}")
+    print(f"Температура у Фаренгейтах - {temp.celsius_to_fahrenheit()} F")
     temp.set_temperature(-278)
 except ValueError as error:
     print(error)
 
 try:
     temp = Temperature(99)
-    print(f"Температура в Цельсіях - {temp.fahrenheit_to_celsius()}")
+    print(f"Температура в Цельсіях - {temp.fahrenheit_to_celsius()} C")
 except ValueError as error:
     print(error)
